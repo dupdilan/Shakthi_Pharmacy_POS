@@ -1,0 +1,170 @@
+C:\Users\HP\source\repos\pharmacy\pharmacy\bin\Debug\PharmacyNew.mdf
+C:\Users\HP\source\repos\pharmacy\pharmacy\bin\Debug\PharmacyNew_log.ldf
+C:\Users\HP\source\repos\pharmacy\pharmacy\bin\Debug\pharmacy.exe.config
+C:\Users\HP\source\repos\pharmacy\pharmacy\bin\Debug\pharmacy.exe
+C:\Users\HP\source\repos\pharmacy\pharmacy\bin\Debug\pharmacy.pdb
+C:\Users\HP\source\repos\pharmacy\pharmacy\obj\Debug\pharmacy.Dashboard.resources
+C:\Users\HP\source\repos\pharmacy\pharmacy\obj\Debug\pharmacy.Login.resources
+C:\Users\HP\source\repos\pharmacy\pharmacy\obj\Debug\pharmacy.Properties.Resources.resources
+C:\Users\HP\source\repos\pharmacy\pharmacy\obj\Debug\pharmacy.UserControl_items.resources
+C:\Users\HP\source\repos\pharmacy\pharmacy\obj\Debug\pharmacy.userControl_customers.resources
+C:\Users\HP\source\repos\pharmacy\pharmacy\obj\Debug\pharmacy.UserControl_purchase.resources
+C:\Users\HP\source\repos\pharmacy\pharmacy\obj\Debug\pharmacy.UserControl_reports.resources
+C:\Users\HP\source\repos\pharmacy\pharmacy\obj\Debug\pharmacy.UserControl_Sales.resources
+C:\Users\HP\source\repos\pharmacy\pharmacy\obj\Debug\pharmacy.UserControl_suppler.resources
+C:\Users\HP\source\repos\pharmacy\pharmacy\obj\Debug\pharmacy.csproj.GenerateResource.cache
+C:\Users\HP\source\repos\pharmacy\pharmacy\obj\Debug\pharmacy.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\pharmacy\pharmacy\obj\Debug\pharmacy.exe
+C:\Users\HP\source\repos\pharmacy\pharmacy\obj\Debug\pharmacy.pdb
+C:\Users\HP\source\repos\pharmacy\pharmacy\obj\Debug\pharmacy.csprojAssemblyReference.cache
+C:\Users\HP\Desktop\aaaaa\pharmacy\pharmacy\bin\Debug\PharmacyNew.mdf
+C:\Users\HP\Desktop\aaaaa\pharmacy\pharmacy\bin\Debug\PharmacyNew_log.ldf
+C:\Users\HP\Desktop\aaaaa\pharmacy\pharmacy\bin\Debug\pharmacy.exe.config
+C:\Users\HP\Desktop\aaaaa\pharmacy\pharmacy\bin\Debug\pharmacy.exe
+C:\Users\HP\Desktop\aaaaa\pharmacy\pharmacy\bin\Debug\pharmacy.pdb
+C:\Users\HP\Desktop\aaaaa\pharmacy\pharmacy\obj\Debug\pharmacy.csprojAssemblyReference.cache
+C:\Users\HP\Desktop\aaaaa\pharmacy\pharmacy\obj\Debug\pharmacy.Dashboard.resources
+C:\Users\HP\Desktop\aaaaa\pharmacy\pharmacy\obj\Debug\pharmacy.Login.resources
+C:\Users\HP\Desktop\aaaaa\pharmacy\pharmacy\obj\Debug\pharmacy.Properties.Resources.resources
+C:\Users\HP\Desktop\aaaaa\pharmacy\pharmacy\obj\Debug\pharmacy.UserControl_items.resources
+C:\Users\HP\Desktop\aaaaa\pharmacy\pharmacy\obj\Debug\pharmacy.userControl_customers.resources
+C:\Users\HP\Desktop\aaaaa\pharmacy\pharmacy\obj\Debug\pharmacy.UserControl_purchase.resources
+C:\Users\HP\Desktop\aaaaa\pharmacy\pharmacy\obj\Debug\pharmacy.UserControl_reports.resources
+C:\Users\HP\Desktop\aaaaa\pharmacy\pharmacy\obj\Debug\pharmacy.UserControl_Sales.resources
+C:\Users\HP\Desktop\aaaaa\pharmacy\pharmacy\obj\Debug\pharmacy.UserControl_suppler.resources
+C:\Users\HP\Desktop\aaaaa\pharmacy\pharmacy\obj\Debug\pharmacy.csproj.GenerateResource.cache
+C:\Users\HP\Desktop\aaaaa\pharmacy\pharmacy\obj\Debug\pharmacy.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\aaaaa\pharmacy\pharmacy\obj\Debug\pharmacy.exe
+C:\Users\HP\Desktop\aaaaa\pharmacy\pharmacy\obj\Debug\pharmacy.pdb
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\bin\Debug\PharmacyNew.mdf
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\bin\Debug\PharmacyNew_log.ldf
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\bin\Debug\pharmacy.exe.config
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\bin\Debug\pharmacy.exe
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\bin\Debug\pharmacy.pdb
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\obj\Debug\pharmacy.Dashboard.resources
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\obj\Debug\pharmacy.dashbordimage.resources
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\obj\Debug\pharmacy.Login.resources
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\obj\Debug\pharmacy.Properties.Resources.resources
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\obj\Debug\pharmacy.UserControl_items.resources
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\obj\Debug\pharmacy.userControl_customers.resources
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\obj\Debug\pharmacy.UserControl_purchase.resources
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\obj\Debug\pharmacy.UserControl_reports.resources
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\obj\Debug\pharmacy.UserControl_Sales.resources
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\obj\Debug\pharmacy.UserControl_suppler.resources
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\obj\Debug\pharmacy.csproj.GenerateResource.cache
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\obj\Debug\pharmacy.csproj.CoreCompileInputs.cache
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\obj\Debug\pharmacy.exe
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\obj\Debug\pharmacy.pdb
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\obj\Debug\pharmacy.csprojAssemblyReference.cache
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\bin\Debug\FlashControlV71.dll
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\bin\Debug\stdole.dll
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\obj\Debug\pharmacy.Reports.itemReport.resources
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\obj\Debug\pharmacy.csproj.CopyComplete
+C:\Users\DUPDILAN\Desktop\aaaaa\pharmacy\pharmacy\bin\Debug\System.Net.Http.dll
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\bin\Debug\PharmacyNew.mdf
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\bin\Debug\PharmacyNew_log.ldf
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\bin\Debug\pharmacy.exe.config
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\bin\Debug\pharmacy.exe
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\bin\Debug\pharmacy.pdb
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportSource.dll
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\bin\Debug\CrystalDecisions.Shared.dll
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\bin\Debug\CrystalDecisions.Windows.Forms.dll
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\bin\Debug\FlashControlV71.dll
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\bin\Debug\System.Net.Http.dll
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\bin\Debug\ShockwaveFlashObjects.dll
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\bin\Debug\stdole.dll
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\obj\Debug\pharmacy.csprojAssemblyReference.cache
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\obj\Debug\pharmacy.Dashboard.resources
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\obj\Debug\pharmacy.dashbordimage.resources
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\obj\Debug\pharmacy.Login.resources
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\obj\Debug\pharmacy.Properties.Resources.resources
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\obj\Debug\pharmacy.Reports.itemReport.resources
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\obj\Debug\pharmacy.UserControl_items.resources
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\obj\Debug\pharmacy.userControl_customers.resources
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\obj\Debug\pharmacy.UserControl_purchase.resources
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\obj\Debug\pharmacy.UserControl_reports.resources
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\obj\Debug\pharmacy.UserControl_Sales.resources
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\obj\Debug\pharmacy.UserControl_suppler.resources
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\obj\Debug\pharmacy.csproj.GenerateResource.cache
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\obj\Debug\pharmacy.csproj.CoreCompileInputs.cache
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\obj\Debug\pharmacy.csproj.CopyComplete
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\obj\Debug\pharmacy.exe
+E:\project\New folder\Update_7_1\pharmacy\pharmacy\obj\Debug\pharmacy.pdb
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\bin\Debug\PharmacyNew.mdf
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\bin\Debug\PharmacyNew_log.ldf
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\bin\Debug\pharmacy.exe.config
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\bin\Debug\pharmacy.exe
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\bin\Debug\pharmacy.pdb
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\bin\Debug\FlashControlV71.dll
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\bin\Debug\System.Net.Http.dll
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\bin\Debug\stdole.dll
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\obj\Debug\pharmacy.csprojAssemblyReference.cache
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\obj\Debug\pharmacy.Dashboard.resources
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\obj\Debug\pharmacy.dashbordimage.resources
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\obj\Debug\pharmacy.Login.resources
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\obj\Debug\pharmacy.Properties.Resources.resources
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\obj\Debug\pharmacy.Reports.itemReport.resources
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\obj\Debug\pharmacy.UserControl_items.resources
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\obj\Debug\pharmacy.userControl_customers.resources
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\obj\Debug\pharmacy.UserControl_purchase.resources
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\obj\Debug\pharmacy.UserControl_reports.resources
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\obj\Debug\pharmacy.UserControl_Sales.resources
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\obj\Debug\pharmacy.UserControl_suppler.resources
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\obj\Debug\pharmacy.csproj.GenerateResource.cache
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\obj\Debug\pharmacy.csproj.CoreCompileInputs.cache
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\obj\Debug\pharmacy.csproj.CopyComplete
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\obj\Debug\pharmacy.exe
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\obj\Debug\pharmacy.pdb
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\obj\Debug\pharmacy.Reports.customerReport.resources
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\obj\Debug\pharmacy.Reports.supplierReport.resources
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\obj\Debug\pharmacy.Reports.lowStock.resources
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\obj\Debug\pharmacy.Reports.salesInvoice.resources
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\obj\Debug\pharmacy.Reports.searchInvoive.resources
+C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\obj\Debug\pharmacy.Reports.daySummery.resources
