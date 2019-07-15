@@ -66,8 +66,10 @@
             this.txt_paid = new System.Windows.Forms.TextBox();
             this.txt_balance = new System.Windows.Forms.TextBox();
             this.lbl_date = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txt_date = new System.Windows.Forms.DateTimePicker();
             this.btn_purchase = new System.Windows.Forms.Button();
+            this.lbl_stock = new System.Windows.Forms.Label();
+            this.txt_stock = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label2
@@ -115,7 +117,7 @@
             // 
             this.lbl_Qty.AutoSize = true;
             this.lbl_Qty.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Qty.Location = new System.Drawing.Point(725, 178);
+            this.lbl_Qty.Location = new System.Drawing.Point(750, 178);
             this.lbl_Qty.Name = "lbl_Qty";
             this.lbl_Qty.Size = new System.Drawing.Size(38, 24);
             this.lbl_Qty.TabIndex = 5;
@@ -125,7 +127,7 @@
             // 
             this.lbl_price.AutoSize = true;
             this.lbl_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_price.Location = new System.Drawing.Point(538, 178);
+            this.lbl_price.Location = new System.Drawing.Point(495, 178);
             this.lbl_price.Name = "lbl_price";
             this.lbl_price.Size = new System.Drawing.Size(53, 24);
             this.lbl_price.TabIndex = 6;
@@ -177,7 +179,7 @@
             // 
             // txt_Price
             // 
-            this.txt_Price.Location = new System.Drawing.Point(514, 223);
+            this.txt_Price.Location = new System.Drawing.Point(478, 223);
             this.txt_Price.Name = "txt_Price";
             this.txt_Price.Size = new System.Drawing.Size(120, 22);
             this.txt_Price.TabIndex = 12;
@@ -191,10 +193,11 @@
             // 
             // txt_qty
             // 
-            this.txt_qty.Location = new System.Drawing.Point(717, 223);
+            this.txt_qty.Location = new System.Drawing.Point(742, 223);
             this.txt_qty.Name = "txt_qty";
             this.txt_qty.Size = new System.Drawing.Size(119, 22);
             this.txt_qty.TabIndex = 14;
+            this.txt_qty.TextChanged += new System.EventHandler(this.txt_qty_TextChanged);
             // 
             // txt_total
             // 
@@ -367,6 +370,7 @@
             this.txt_discount.Name = "txt_discount";
             this.txt_discount.Size = new System.Drawing.Size(100, 22);
             this.txt_discount.TabIndex = 29;
+            this.txt_discount.TextChanged += new System.EventHandler(this.txt_discount_TextChanged);
             // 
             // txt_net
             // 
@@ -381,6 +385,7 @@
             this.txt_paid.Name = "txt_paid";
             this.txt_paid.Size = new System.Drawing.Size(124, 22);
             this.txt_paid.TabIndex = 31;
+            this.txt_paid.TextChanged += new System.EventHandler(this.txt_paid_TextChanged);
             // 
             // txt_balance
             // 
@@ -399,12 +404,15 @@
             this.lbl_date.TabIndex = 33;
             this.lbl_date.Text = "Date";
             // 
-            // dateTimePicker1
+            // txt_date
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(170, 752);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 34;
+            this.txt_date.CustomFormat = "MM/dd/yyyy";
+            this.txt_date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.txt_date.Location = new System.Drawing.Point(170, 752);
+            this.txt_date.Name = "txt_date";
+            this.txt_date.Size = new System.Drawing.Size(200, 22);
+            this.txt_date.TabIndex = 34;
+            this.txt_date.ValueChanged += new System.EventHandler(this.txt_date_ValueChanged);
             // 
             // btn_purchase
             // 
@@ -417,12 +425,33 @@
             this.btn_purchase.UseVisualStyleBackColor = true;
             this.btn_purchase.Click += new System.EventHandler(this.btn_purchase_Click);
             // 
+            // lbl_stock
+            // 
+            this.lbl_stock.AutoSize = true;
+            this.lbl_stock.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_stock.Location = new System.Drawing.Point(642, 178);
+            this.lbl_stock.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_stock.Name = "lbl_stock";
+            this.lbl_stock.Size = new System.Drawing.Size(56, 24);
+            this.lbl_stock.TabIndex = 38;
+            this.lbl_stock.Text = "Stock";
+            // 
+            // txt_stock
+            // 
+            this.txt_stock.Location = new System.Drawing.Point(626, 223);
+            this.txt_stock.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_stock.Name = "txt_stock";
+            this.txt_stock.Size = new System.Drawing.Size(83, 22);
+            this.txt_stock.TabIndex = 37;
+            // 
             // UserControl_purchase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lbl_stock);
+            this.Controls.Add(this.txt_stock);
             this.Controls.Add(this.btn_purchase);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.txt_date);
             this.Controls.Add(this.lbl_date);
             this.Controls.Add(this.txt_balance);
             this.Controls.Add(this.txt_paid);
@@ -499,12 +528,14 @@
         private System.Windows.Forms.TextBox txt_paid;
         private System.Windows.Forms.TextBox txt_balance;
         private System.Windows.Forms.Label lbl_date;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker txt_date;
         private System.Windows.Forms.Button btn_purchase;
         private System.Windows.Forms.ColumnHeader Item_name;
         private System.Windows.Forms.ColumnHeader Item_ID;
         private System.Windows.Forms.ColumnHeader price;
         private System.Windows.Forms.ColumnHeader Qty;
         private System.Windows.Forms.ColumnHeader Total;
+        private System.Windows.Forms.Label lbl_stock;
+        private System.Windows.Forms.TextBox txt_stock;
     }
 }

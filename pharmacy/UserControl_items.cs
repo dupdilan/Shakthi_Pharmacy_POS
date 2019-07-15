@@ -115,6 +115,39 @@ namespace pharmacy
 
         private void btn_update_Click(object sender, EventArgs e)
         {
+            try
+            {
+
+                string sqlquary = "UPDATE Item_details SET Name='" + this.txt_item_name.Text + "', Description='" + this.txt_description.Text + "',Price_Cost='" + this.txt_pricecost.Text + "',Sales_Price='" + this.txt_price.Text + "',Qty='" + this.txt_qty.Text + "' WHERE Item_ID='" + this.txt_itemID.Text + "' ";
+                SqlCommand com = new SqlCommand(sqlquary, conn);
+                SqlDataReader sdr;
+                conn.Open();
+
+                sdr = com.ExecuteReader();
+                MessageBox.Show("Update Data");
+
+                while (sdr.Read())
+                {
+
+                }
+
+                conn.Close();
+                disp_data();
+                txt_itemID.Text = " ";
+                txt_item_name.Text = " ";
+                txt_description.Text = " ";
+                txt_pricecost.Text = " ";
+                txt_price.Text = " ";
+
+                txt_qty.Text = " ";
+
+
+            }
+            catch (Exception e002)
+            {
+                MessageBox.Show(e002.Message);
+                conn.Close();
+            }
 
         }
 

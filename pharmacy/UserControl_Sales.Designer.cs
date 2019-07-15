@@ -406,6 +406,8 @@
             // 
             // txt_date
             // 
+            this.txt_date.CustomFormat = "MM/dd/yyyy";
+            this.txt_date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.txt_date.Location = new System.Drawing.Point(191, 773);
             this.txt_date.Name = "txt_date";
             this.txt_date.Size = new System.Drawing.Size(239, 22);

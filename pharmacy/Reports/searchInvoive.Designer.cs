@@ -69,7 +69,7 @@
             this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
             this.crystalReportViewer1.Location = new System.Drawing.Point(12, 82);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(1234, 805);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(1555, 961);
             this.crystalReportViewer1.TabIndex = 3;
             this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
@@ -77,13 +77,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1247, 899);
+            this.ClientSize = new System.Drawing.Size(1573, 1055);
             this.Controls.Add(this.crystalReportViewer1);
             this.Controls.Add(this.btn_searchInvoice);
             this.Controls.Add(this.txt_invoiceId);
             this.Controls.Add(this.lbl_invoiceId);
             this.Name = "searchInvoive";
             this.Text = "searchInvoive";
+            this.Load += new System.EventHandler(this.searchInvoive_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -162,20 +162,10 @@ namespace pharmacy
         {
             if (txt_qty.Text.Length > 0)
             {
-                if (Convert.ToInt32(txt_stock.Text) >= Convert.ToInt32(txt_qty.Text))
-                {
-
-
                     int val1 = Int32.Parse(txt_price.Text);
                     int val2 = Int32.Parse(txt_qty.Text);
                     int totalVal = val1 * val2;
                     txt_total.Text = totalVal.ToString();
-
-                }
-                else
-                {
-                    MessageBox.Show("Your stock Value is too low to do this order!!! Please do a Purchase Orader");
-                }
             }
             
             
@@ -258,37 +248,7 @@ namespace pharmacy
             cmb_item.ResetText();
             txt_noofitems.Text = (Convert.ToInt32(txt_noofitems.Text) + 1).ToString();
         }
-        /*
-       void updateQty()
-        {
-            try
-            {
-
-                string sqlquary = "update Item_details set Qty ='"+zzz.ToString()+";";
-                SqlCommand com = new SqlCommand(sqlquary, conn);
-                SqlDataReader sdr;
-                conn.Open();
-
-                sdr = com.ExecuteReader();
-               
-
-                while (sdr.Read())
-                {
-
-                }
-
-                conn.Close();
-               
-
-
-            }
-            catch (Exception e002)
-            {
-                MessageBox.Show(e002.Message);
-                conn.Close();
-            }
-        }
-        */
+       
         private void button2_Click(object sender, EventArgs e)
         {
 

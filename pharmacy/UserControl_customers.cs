@@ -120,7 +120,7 @@ namespace pharmacy
             try
             {
 
-                string sqlquary = "update Customer set Customer_ID ='" + txt_customerID.Text + "', Customer_Name='" + txt_customername.Text+"',Address = '"+txt_address.Text+"',Phone ='"+txt_phone.Text+"',NIC ='"+txt_NIC.Text+"'  ;";
+                string sqlquary = "update Customer set Customer_Name='" + txt_customername.Text+"',Address = '"+txt_address.Text+"',Phone ='"+txt_phone.Text+"',NIC ='"+txt_NIC.Text+ "' WHERE Customer_ID ='" + txt_customerID.Text + "' ;";
                 SqlCommand com = new SqlCommand(sqlquary, conn);
                 SqlDataReader sdr;
                 conn.Open();

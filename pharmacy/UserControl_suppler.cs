@@ -101,7 +101,7 @@ namespace pharmacy
         {
             try
             {
-                String quary = "update Supplier_Details set Supplier_ID='" + this.txt_supplierId.Text + "',Supplier_Name ='" + this.txt_suppliername.Text + "', Address='" + this.txt_Address.Text + "', Phone='" + this.txt_supplierPhone.Text + "',NIC='" + this.txt_NIC.Text + "' ;";
+                String quary = "update Supplier_Details set Supplier_Name ='" + this.txt_suppliername.Text + "', Address='" + this.txt_Address.Text + "', Phone='" + this.txt_supplierPhone.Text + "',NIC='" + this.txt_NIC.Text + "' WHERE Supplier_ID='" + this.txt_supplierId.Text + "' ";
                 SqlCommand com = new SqlCommand(quary, conn);
                 SqlDataReader sda;
                 conn.Open();

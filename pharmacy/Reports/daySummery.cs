@@ -23,17 +23,23 @@ namespace pharmacy.Reports
 
         private void btn_view_Click(object sender, EventArgs e)
         {
-            string fromDate = txt_from.Text;
-            string toDate = txt_to.Text;
+            string fromDate = txt_from.Text.ToString();
+            string toDate = txt_to.Text.ToString();
             //MessageBox.Show(fromDate, toDate);
+            
             cryrpt.Load(@"C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\Reports\crystalReport\daySummery.rpt");
             conn.Open();
-            SqlDataAdapter sda = new SqlDataAdapter("Select * from Sales where Date between "+fromDate+"  AND "+ toDate , conn);
+            SqlDataAdapter sda = new SqlDataAdapter("Select * from Sales where Date between '"+ fromDate +"'  AND '"+toDate+"'", conn);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             cryrpt.SetDataSource(dt);
             crystalReportViewer1.ReportSource = cryrpt;
             conn.Close();
+            
+        }
+
+        private void daySummery_Load(object sender, EventArgs e)
+        {
 
         }
     }

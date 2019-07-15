@@ -66,6 +66,8 @@
             // 
             // txt_from
             // 
+            this.txt_from.CustomFormat = "MM/dd/yyyy";
+            this.txt_from.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.txt_from.Location = new System.Drawing.Point(116, 16);
             this.txt_from.Name = "txt_from";
             this.txt_from.Size = new System.Drawing.Size(200, 22);
@@ -73,6 +75,8 @@
             // 
             // txt_to
             // 
+            this.txt_to.CustomFormat = "MM/dd/yyyy";
+            this.txt_to.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.txt_to.Location = new System.Drawing.Point(430, 15);
             this.txt_to.Name = "txt_to";
             this.txt_to.Size = new System.Drawing.Size(200, 22);
@@ -85,7 +89,7 @@
             this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
             this.crystalReportViewer1.Location = new System.Drawing.Point(12, 67);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(1174, 703);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(1238, 984);
             this.crystalReportViewer1.TabIndex = 5;
             this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
@@ -93,7 +97,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1189, 782);
+            this.ClientSize = new System.Drawing.Size(1253, 1055);
             this.Controls.Add(this.crystalReportViewer1);
             this.Controls.Add(this.txt_to);
             this.Controls.Add(this.txt_from);
@@ -102,6 +106,7 @@
             this.Controls.Add(this.btn_view);
             this.Name = "daySummery";
             this.Text = "daySummery";
+            this.Load += new System.EventHandler(this.daySummery_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

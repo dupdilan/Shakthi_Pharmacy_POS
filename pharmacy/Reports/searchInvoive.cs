@@ -36,5 +36,10 @@ namespace pharmacy.Reports
             crystalReportViewer1.ReportSource = cryrpt;
             conn.Close();
         }
+
+        private void searchInvoive_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
