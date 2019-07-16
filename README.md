@@ -5,6 +5,7 @@ Ongoing
   1) .NET Framework
   2) Crytal Report Plugin
   3) MSSQL (ADO.NET)
+  *You have to change Connection String *
 ---------------------------------------------------------------------
 #features 
 ---------------------------------------------------------------------
