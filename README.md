@@ -24,7 +24,7 @@ Ongoing
   User Name : Admin
   Password  : Admin
 -----------------------------------------------------------------------
-Design and Development by dupdilan@gmail.com 
+Design and Development by dupdilan@gmail.com and sadeeshana1995@gmail.com
 -----------------------------------------------------------------------
 You can do what ever you want after clone this
 -----------------------------------------------------------------------
