@@ -1,5 +1,4 @@
 # Shakthi_Pharmacy_POS System
-Ongoing 
 ---------------------------------------------------------------------
 #System Requirement
   1) .NET Framework
