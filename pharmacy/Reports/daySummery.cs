@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -14,7 +15,7 @@ namespace pharmacy.Reports
     public partial class daySummery : Form
     {
         ReportDocument cryrpt = new ReportDocument();
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\PharmacyNew.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection conn = new SqlConnection(DBUtil.dbPath);
 
         public daySummery()
         {
@@ -23,11 +24,15 @@ namespace pharmacy.Reports
 
         private void btn_view_Click(object sender, EventArgs e)
         {
+            string path = Directory.GetCurrentDirectory();
+            string parent = (Directory.GetParent(Directory.GetParent(path).FullName).FullName).ToString();
+            string fullPath = parent + @"\Reports\crystalReport\daySummery.rpt";
+
             string fromDate = txt_from.Text.ToString();
             string toDate = txt_to.Text.ToString();
             //MessageBox.Show(fromDate, toDate);
             
-            cryrpt.Load(@"C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\Reports\crystalReport\daySummery.rpt");
+            cryrpt.Load(@fullPath);
             conn.Open();
             SqlDataAdapter sda = new SqlDataAdapter("Select * from Sales where Date between '"+ fromDate +"'  AND '"+toDate+"'", conn);
             DataTable dt = new DataTable();

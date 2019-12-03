@@ -8,17 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace pharmacy
 {
     public partial class UserControl_items : UserControl
     {
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\PharmacyNew.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection conn = new SqlConnection(DBUtil.dbPath);
+
         public UserControl_items()
         {
             InitializeComponent();
             disp_data();
         }
+        
 
         private void data_item_MouseDoubleClick(object sender, MouseEventArgs e)
         {
@@ -159,6 +162,63 @@ namespace pharmacy
             txt_pricecost.Text = "";
             txt_price.Text = "";
             txt_qty.Text = "";
+        }
+
+        private void UserControl_items_Load(object sender, EventArgs e)
+        {
+            disp_data();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            Excel.Application xlApp;
+            Excel.Workbook xlWorkBook;
+            Excel.Worksheet xlWorkSheet;
+            object misValue = System.Reflection.Missing.Value;
+
+            xlApp = new Excel.Application();
+            xlWorkBook = xlApp.Workbooks.Add(misValue);
+            xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+            int i = 0;
+            int j = 0;
+
+            for (i = 0; i <= dataItems.RowCount - 1; i++)
+            {
+                for (j = 0; j <= dataItems.ColumnCount - 1; j++)
+                {
+                    DataGridViewCell cell = dataItems[j, i];
+                    xlWorkSheet.Cells[i + 1, j + 1] = cell.Value;
+                }
+            }
+
+            xlWorkBook.SaveAs("ItemDetailsBackup.xls", Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
+            xlWorkBook.Close(true, misValue, misValue);
+            xlApp.Quit();
+
+            releaseObject(xlWorkSheet);
+            releaseObject(xlWorkBook);
+            releaseObject(xlApp);
+
+            MessageBox.Show("Excel file created , you can find the file in documents");
+
+        }
+        private void releaseObject(object obj)
+        {
+            try
+            {
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(obj);
+                obj = null;
+            }
+            catch (Exception ex)
+            {
+                obj = null;
+                MessageBox.Show("Exception Occured while releasing object " + ex.ToString());
+            }
+            finally
+            {
+                GC.Collect();
+            }
         }
     }
 }

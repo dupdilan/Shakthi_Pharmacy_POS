@@ -47,6 +47,7 @@
             this.btn_update = new System.Windows.Forms.Button();
             this.btn_clear = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataItems)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,7 +109,7 @@
             // dataItems
             // 
             this.dataItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataItems.Location = new System.Drawing.Point(228, 541);
+            this.dataItems.Location = new System.Drawing.Point(112, 538);
             this.dataItems.Margin = new System.Windows.Forms.Padding(4);
             this.dataItems.Name = "dataItems";
             this.dataItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -249,10 +250,27 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Items";
             // 
+            // button1
+            // 
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(991, 573);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(241, 82);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Export to Excel";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // UserControl_items
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_clear);
             this.Controls.Add(this.btn_update);
@@ -274,6 +292,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserControl_items";
             this.Size = new System.Drawing.Size(1260, 810);
+            this.Load += new System.EventHandler(this.UserControl_items_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataItems)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -300,5 +319,6 @@
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Button btn_clear;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -13,7 +13,7 @@ namespace pharmacy
 {
     public partial class Login : Form
     {
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\PharmacyNew.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\PharmacyNew.mdf;Integrated Security=True;Connect Timeout=30");
         public Login()
         {
             InitializeComponent();

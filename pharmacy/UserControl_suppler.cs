@@ -13,7 +13,7 @@ namespace pharmacy
 {
     public partial class UserControl_suppler : UserControl
     {
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\PharmacyNew.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection conn = new SqlConnection(DBUtil.dbPath);
         public UserControl_suppler()
         {
          

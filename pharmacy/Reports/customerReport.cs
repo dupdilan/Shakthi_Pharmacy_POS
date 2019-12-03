@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -14,8 +15,7 @@ namespace pharmacy.Reports
     public partial class customerReport : Form
     {
         ReportDocument cryrpt = new ReportDocument();
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\PharmacyNew.mdf;Integrated Security=True;Connect Timeout=30");
-
+        SqlConnection conn = new SqlConnection(DBUtil.dbPath);
         public customerReport()
         {
             InitializeComponent();
@@ -23,7 +23,11 @@ namespace pharmacy.Reports
 
         private void customerReport_Load(object sender, EventArgs e)
         {
-            cryrpt.Load(@"C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\Reports\crystalReport\customerReport.rpt");
+            string path = Directory.GetCurrentDirectory();
+            string parent = (Directory.GetParent(Directory.GetParent(path).FullName).FullName).ToString();
+            string fullPath = parent + @"\Reports\crystalReport\customerReport.rpt";
+
+            cryrpt.Load(@fullPath);
             conn.Open();
             SqlDataAdapter sda = new SqlDataAdapter("Select * from Customer", conn);
             DataTable dt = new DataTable();

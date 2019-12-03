@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,8 +16,7 @@ namespace pharmacy.Reports
     public partial class itemReport : Form
     {
         ReportDocument cryrpt = new ReportDocument();
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\PharmacyNew.mdf;Integrated Security=True;Connect Timeout=30");
-
+        SqlConnection conn = new SqlConnection(DBUtil.dbPath);
         public itemReport()
         {
             InitializeComponent();
@@ -29,7 +29,15 @@ namespace pharmacy.Reports
 
         private void itemReport_Load(object sender, EventArgs e)
         {
-            cryrpt.Load(@"C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\Reports\crystalReport\itemReport.rpt");
+            string path = Directory.GetCurrentDirectory();
+            string parent = (Directory.GetParent(Directory.GetParent(path).FullName).FullName).ToString();
+            string fullPath = parent + @"\Reports\crystalReport\itemReport.rpt";
+            //string fullPath = Path.Combine(parent, @"\Reports\crystalReport\itemReport.rpt");
+            //string parentFolder = Directory.GetParent(path);
+            //Console.WriteLine(fullPath);
+            //Console.WriteLine(parent);
+
+            cryrpt.Load(@fullPath);
             conn.Open();
             SqlDataAdapter sda = new SqlDataAdapter("Select * from item_details", conn);
             DataTable dt = new DataTable();

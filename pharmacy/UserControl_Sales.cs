@@ -15,7 +15,7 @@ namespace pharmacy
     {
         int zzz;
         private int count = 0;
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\DUPDILAN\Desktop\pharmacy\pharmacy\PharmacyNew.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection conn = new SqlConnection(DBUtil.dbPath);
         public UserControl_Sales()
         {
             InitializeComponent();
