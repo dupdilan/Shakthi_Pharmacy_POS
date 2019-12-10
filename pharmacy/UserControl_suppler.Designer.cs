@@ -43,10 +43,11 @@
             this.btn_Insert = new System.Windows.Forms.Button();
             this.btn_update = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
-            this.btn_Search = new System.Windows.Forms.Button();
             this.txt_Supplier_Search = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_clear = new System.Windows.Forms.Button();
+            this.lbl_text = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Suppliers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -152,7 +153,7 @@
             this.dataGridView_Suppliers.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView_Suppliers.Name = "dataGridView_Suppliers";
             this.dataGridView_Suppliers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_Suppliers.Size = new System.Drawing.Size(957, 201);
+            this.dataGridView_Suppliers.Size = new System.Drawing.Size(701, 201);
             this.dataGridView_Suppliers.TabIndex = 12;
             this.dataGridView_Suppliers.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView_Suppliers_MouseDoubleClick);
             // 
@@ -201,28 +202,14 @@
             this.btn_delete.UseVisualStyleBackColor = true;
             this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
-            // btn_Search
-            // 
-            this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Search.Image = ((System.Drawing.Image)(resources.GetObject("btn_Search.Image")));
-            this.btn_Search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Search.Location = new System.Drawing.Point(992, 25);
-            this.btn_Search.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Size = new System.Drawing.Size(215, 79);
-            this.btn_Search.TabIndex = 16;
-            this.btn_Search.Text = "Search";
-            this.btn_Search.UseVisualStyleBackColor = true;
-            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
-            // 
             // txt_Supplier_Search
             // 
-            this.txt_Supplier_Search.Location = new System.Drawing.Point(809, 54);
+            this.txt_Supplier_Search.Location = new System.Drawing.Point(878, 56);
             this.txt_Supplier_Search.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Supplier_Search.Name = "txt_Supplier_Search";
             this.txt_Supplier_Search.Size = new System.Drawing.Size(132, 22);
             this.txt_Supplier_Search.TabIndex = 17;
+            this.txt_Supplier_Search.TextChanged += new System.EventHandler(this.txt_Supplier_Search_TextChanged);
             // 
             // label1
             // 
@@ -230,9 +217,9 @@
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 24F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(504, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(185, 46);
+            this.label1.Size = new System.Drawing.Size(282, 46);
             this.label1.TabIndex = 18;
-            this.label1.Text = "Supplier";
+            this.label1.Text = "New Supplier";
             // 
             // btn_clear
             // 
@@ -248,14 +235,38 @@
             this.btn_clear.UseVisualStyleBackColor = true;
             this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
+            // lbl_text
+            // 
+            this.lbl_text.AutoSize = true;
+            this.lbl_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_text.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lbl_text.Location = new System.Drawing.Point(127, 489);
+            this.lbl_text.Name = "lbl_text";
+            this.lbl_text.Size = new System.Drawing.Size(701, 29);
+            this.lbl_text.TabIndex = 21;
+            this.lbl_text.Text = "If you want Update details please click the table row and click update only";
+            this.lbl_text.UseCompatibleTextRendering = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(830, 28);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(227, 24);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Search By Supplier Name";
+            // 
             // UserControl_suppler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbl_text);
             this.Controls.Add(this.btn_clear);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_Supplier_Search);
-            this.Controls.Add(this.btn_Search);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.btn_Insert);
@@ -295,9 +306,10 @@
         private System.Windows.Forms.Button btn_Insert;
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Button btn_delete;
-        private System.Windows.Forms.Button btn_Search;
         private System.Windows.Forms.TextBox txt_Supplier_Search;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_clear;
+        private System.Windows.Forms.Label lbl_text;
+        private System.Windows.Forms.Label label2;
     }
 }

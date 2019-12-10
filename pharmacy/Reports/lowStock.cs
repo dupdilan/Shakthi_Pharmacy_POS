@@ -24,18 +24,25 @@ namespace pharmacy.Reports
 
         private void lowStock_Load(object sender, EventArgs e)
         {
-            string path = Directory.GetCurrentDirectory();
-            string parent = (Directory.GetParent(Directory.GetParent(path).FullName).FullName).ToString();
-            string fullPath = parent + @"\Reports\crystalReport\lowStock.rpt";
+            try
+            {
+                string path = Directory.GetCurrentDirectory();
+                string parent = (Directory.GetParent(Directory.GetParent(path).FullName).FullName).ToString();
+                string fullPath = parent + @"\Reports\crystalReport\lowStock.rpt";
 
-            cryrpt.Load(@fullPath);
-            conn.Open();
-            SqlDataAdapter sda = new SqlDataAdapter("Select * from item_details where Qty<10 ", conn);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            cryrpt.SetDataSource(dt);
-            crystalReportViewer1.ReportSource = cryrpt;
-            conn.Close();
+                cryrpt.Load(@fullPath);
+                conn.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("Select * from item_details where Qty<10 ", conn);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                cryrpt.SetDataSource(dt);
+                crystalReportViewer1.ReportSource = cryrpt;
+                conn.Close();
+            }
+            catch(Exception e01){
+                MessageBox.Show(e01.Message);
+            }
+            
 
         }
     }

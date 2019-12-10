@@ -25,22 +25,31 @@ namespace pharmacy.Reports
 
         private void btn_searchInvoice_Click(object sender, EventArgs e)
         {
-            int invoice_Id = Convert.ToInt32(txt_invoiceId.Text);
-            string path = Directory.GetCurrentDirectory();
-            string parent = (Directory.GetParent(Directory.GetParent(path).FullName).FullName).ToString();
-            string fullPath = parent + @"\Reports\crystalReport\searchInvoice.rpt";
+            try
+            {
+                int invoice_Id = Convert.ToInt32(txt_invoiceId.Text);
+                string path = Directory.GetCurrentDirectory();
+                string parent = (Directory.GetParent(Directory.GetParent(path).FullName).FullName).ToString();
+                string fullPath = parent + @"\Reports\crystalReport\searchInvoice.rpt";
 
-            cryrpt.Load(@fullPath);
-            conn.Open();
-            DataSet.item dst = new DataSet.item();
-            SqlDataAdapter sda = new SqlDataAdapter("select * from Sales where Invoice_Id=" + invoice_Id, conn);
-            sda.Fill(dst, "Sales");
-            SqlDataAdapter sda1 = new SqlDataAdapter("select * from Sales_Item where Invoice_Id=" + invoice_Id, conn);
-            sda1.Fill(dst, "Sales_Item");
-            cryrpt.SetDataSource(dst);
+                cryrpt.Load(@fullPath);
+                conn.Open();
+                DataSet.item dst = new DataSet.item();
+                SqlDataAdapter sda = new SqlDataAdapter("select * from Sales where Invoice_Id=" + invoice_Id, conn);
+                sda.Fill(dst, "Sales");
+                SqlDataAdapter sda1 = new SqlDataAdapter("select * from Sales_Item where Invoice_Id=" + invoice_Id, conn);
+                sda1.Fill(dst, "Sales_Item");
+                cryrpt.SetDataSource(dst);
 
-            crystalReportViewer1.ReportSource = cryrpt;
-            conn.Close();
+                crystalReportViewer1.ReportSource = cryrpt;
+                conn.Close();
+            }
+            catch (Exception e01)
+            {
+                MessageBox.Show("Please check Sales Invoice NO");
+                conn.Close();
+            }
+
         }
 
         private void searchInvoive_Load(object sender, EventArgs e)

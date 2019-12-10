@@ -23,18 +23,25 @@ namespace pharmacy.Reports
 
         private void customerReport_Load(object sender, EventArgs e)
         {
-            string path = Directory.GetCurrentDirectory();
-            string parent = (Directory.GetParent(Directory.GetParent(path).FullName).FullName).ToString();
-            string fullPath = parent + @"\Reports\crystalReport\customerReport.rpt";
+            try
+            {
+                string path = Directory.GetCurrentDirectory();
+                string parent = (Directory.GetParent(Directory.GetParent(path).FullName).FullName).ToString();
+                string fullPath = parent + @"\Reports\crystalReport\customerReport.rpt";
 
-            cryrpt.Load(@fullPath);
-            conn.Open();
-            SqlDataAdapter sda = new SqlDataAdapter("Select * from Customer", conn);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            cryrpt.SetDataSource(dt);
-            crystalReportViewer1.ReportSource = cryrpt;
-            conn.Close();
+                cryrpt.Load(@fullPath);
+                conn.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("Select * from Customer", conn);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                cryrpt.SetDataSource(dt);
+                crystalReportViewer1.ReportSource = cryrpt;
+                conn.Close();
+            }catch(Exception e01)
+            {
+                MessageBox.Show(e01.Message);
+            }
+            
 
 
         }

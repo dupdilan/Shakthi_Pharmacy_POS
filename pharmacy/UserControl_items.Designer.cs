@@ -48,6 +48,9 @@
             this.btn_clear = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.lbl_text = new System.Windows.Forms.Label();
+            this.txt_Item_Search = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataItems)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,7 +69,7 @@
             // 
             this.lbl_itemname.AutoSize = true;
             this.lbl_itemname.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_itemname.Location = new System.Drawing.Point(244, 150);
+            this.lbl_itemname.Location = new System.Drawing.Point(244, 152);
             this.lbl_itemname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_itemname.Name = "lbl_itemname";
             this.lbl_itemname.Size = new System.Drawing.Size(101, 24);
@@ -102,19 +105,20 @@
             this.lbl_qty.Location = new System.Drawing.Point(244, 348);
             this.lbl_qty.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_qty.Name = "lbl_qty";
-            this.lbl_qty.Size = new System.Drawing.Size(38, 24);
+            this.lbl_qty.Size = new System.Drawing.Size(91, 24);
             this.lbl_qty.TabIndex = 4;
-            this.lbl_qty.Text = "Qty";
+            this.lbl_qty.Text = "Open Qty";
             // 
             // dataItems
             // 
             this.dataItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataItems.Location = new System.Drawing.Point(112, 538);
+            this.dataItems.Location = new System.Drawing.Point(128, 558);
             this.dataItems.Margin = new System.Windows.Forms.Padding(4);
             this.dataItems.Name = "dataItems";
             this.dataItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataItems.Size = new System.Drawing.Size(855, 238);
             this.dataItems.TabIndex = 6;
+            this.dataItems.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataItems_CellContentClick);
             this.dataItems.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.data_item_MouseDoubleClick);
             // 
             // txt_itemID
@@ -246,16 +250,15 @@
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 24F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(530, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 46);
+            this.label1.Size = new System.Drawing.Size(225, 46);
             this.label1.TabIndex = 18;
-            this.label1.Text = "Items";
+            this.label1.Text = "New Items";
             // 
             // button1
             // 
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(991, 573);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
@@ -266,10 +269,45 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // lbl_text
+            // 
+            this.lbl_text.AutoSize = true;
+            this.lbl_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_text.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lbl_text.Location = new System.Drawing.Point(128, 517);
+            this.lbl_text.Name = "lbl_text";
+            this.lbl_text.Size = new System.Drawing.Size(701, 29);
+            this.lbl_text.TabIndex = 20;
+            this.lbl_text.Text = "If you want Update details please click the table row and click update only";
+            this.lbl_text.UseCompatibleTextRendering = true;
+            // 
+            // txt_Item_Search
+            // 
+            this.txt_Item_Search.Location = new System.Drawing.Point(885, 64);
+            this.txt_Item_Search.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_Item_Search.Name = "txt_Item_Search";
+            this.txt_Item_Search.Size = new System.Drawing.Size(132, 22);
+            this.txt_Item_Search.TabIndex = 22;
+            this.txt_Item_Search.TextChanged += new System.EventHandler(this.searchItem);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(860, 36);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(192, 24);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Search By Item Name";
+            // 
             // UserControl_items
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txt_Item_Search);
+            this.Controls.Add(this.lbl_text);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_clear);
@@ -320,5 +358,8 @@
         private System.Windows.Forms.Button btn_clear;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lbl_text;
+        private System.Windows.Forms.TextBox txt_Item_Search;
+        private System.Windows.Forms.Label label2;
     }
 }

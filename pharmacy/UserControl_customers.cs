@@ -36,33 +36,41 @@ namespace pharmacy
         {
             try
             {
-
-                string sqlquary = "insert into Customer(Customer_ID,Customer_Name,Address,Phone,NIC) values('" + this.txt_customerID.Text + "','" + this.txt_customername.Text + "','" + this.txt_address.Text + "','" + this.txt_phone.Text + "','" + this.txt_NIC.Text + "'); ";
-                SqlCommand com = new SqlCommand(sqlquary, conn);
-                SqlDataReader sdr;
-                conn.Open();
-
-                sdr = com.ExecuteReader();
-                MessageBox.Show("Save Data");
-
-                while (sdr.Read())
+                if (this.txt_customerID.Text != "" && this.txt_customername.Text != "" && this.txt_phone.Text != "" && this.txt_NIC.Text != "" && this.txt_address.Text != "")
                 {
+                    string sqlquary = "insert into Customer(Customer_ID,Customer_Name,Address,Phone,NIC) values('" + this.txt_customerID.Text + "','" + this.txt_customername.Text + "','" + this.txt_address.Text + "','" + this.txt_phone.Text + "','" + this.txt_NIC.Text + "'); ";
+                    SqlCommand com = new SqlCommand(sqlquary, conn);
+                    SqlDataReader sdr;
+                    conn.Open();
+
+                    sdr = com.ExecuteReader();
+                    MessageBox.Show("Save Data");
+
+                    while (sdr.Read())
+                    {
+
+                    }
+
+                    conn.Close();
+                    disp_data();
+                    txt_customerID.Text = " ";
+                    txt_customername.Text = " ";
+                    txt_address.Text = " ";
+                    txt_phone.Text = " ";
+                    txt_NIC.Text = " ";
+
 
                 }
+                else
+                {
+                    MessageBox.Show("You should have to Fill Correctly!!!");
+                }
 
-                conn.Close();
-                disp_data();
-                txt_customerID.Text = " ";
-                txt_customername.Text = " ";
-                txt_address.Text = " ";
-                txt_phone.Text = " ";
-                txt_NIC.Text = " ";
-               
 
             }
             catch (Exception e002)
             {
-                MessageBox.Show(e002.Message);
+                MessageBox.Show("Cannot use same ID for defferent Items Or If you want to Update item details please click the Update Button..Thank you!!!");
                 conn.Close();
             }
 
@@ -168,6 +176,35 @@ namespace pharmacy
             txt_NIC.Text = "";
             txt_phone.Text = "";
            
+        }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            if (txt_Customer_Search.Text != "")
+            {
+                String quary = "select * from Customer where Customer_Name='" + this.txt_Customer_Search.Text + "' ;";
+                SqlCommand com = new SqlCommand(quary, conn);
+                SqlDataAdapter sda = new SqlDataAdapter();
+                sda.SelectCommand = com;
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataCustomer.DataSource = dt;
+            }
+            else
+            {
+                disp_data();
+            }
+        }
+
+        private void txt_Customer_Search_TextChanged(object sender, EventArgs e)
+        {
+            conn.Open();
+            SqlDataAdapter adapt;
+            adapt = new SqlDataAdapter("select * from Customer where Customer_Name like '" + txt_Customer_Search.Text + "%'", conn);
+            DataTable dt = new DataTable();
+            adapt.Fill(dt);
+            dataCustomer.DataSource = dt;
+            conn.Close();
         }
     }
     }

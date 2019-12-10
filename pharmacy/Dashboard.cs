@@ -21,6 +21,7 @@ namespace pharmacy
         private void btn_Items_Click(object sender, EventArgs e)
         {
             userControl_items2.BringToFront();
+            userControl_items2.UserControl_items_Load(sender, e);
         }
 
         private void Dashboard_Load(object sender, EventArgs e)

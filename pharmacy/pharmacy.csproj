@@ -173,6 +173,12 @@
     <Compile Include="Reports\searchInvoive.Designer.cs">
       <DependentUpon>searchInvoive.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\searchPurchaseInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\searchPurchaseInvoice.Designer.cs">
+      <DependentUpon>searchPurchaseInvoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\supplierReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -279,6 +285,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\searchInvoive.resx">
       <DependentUpon>searchInvoive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\searchPurchaseInvoice.resx">
+      <DependentUpon>searchPurchaseInvoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\supplierReport.resx">
       <DependentUpon>supplierReport.cs</DependentUpon>

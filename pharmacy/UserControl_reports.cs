@@ -55,12 +55,24 @@ namespace pharmacy
         {
             Reports.searchInvoive searchIn = new Reports.searchInvoive();
             searchIn.Show();
+            //Reports.salesInvoice salesInvoice = new Reports.salesInvoice();
+
         }
 
         private void btn_day_summery_Click(object sender, EventArgs e)
         {
             Reports.daySummery day = new Reports.daySummery();
             day.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("please contact Developers!!!");
+        }
+
+        private void btn_commonItems_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("please contact Developers!!!");
         }
     }
 }

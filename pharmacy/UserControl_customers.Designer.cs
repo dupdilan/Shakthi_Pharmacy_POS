@@ -45,6 +45,9 @@
             this.dataCustomer = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_clear = new System.Windows.Forms.Button();
+            this.txt_Customer_Search = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_text = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataCustomer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -124,7 +127,7 @@
             this.btn_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_delete.Image")));
             this.btn_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_delete.Location = new System.Drawing.Point(920, 244);
+            this.btn_delete.Location = new System.Drawing.Point(920, 271);
             this.btn_delete.Margin = new System.Windows.Forms.Padding(4);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(241, 82);
@@ -139,7 +142,7 @@
             this.btn_update.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_update.Image = ((System.Drawing.Image)(resources.GetObject("btn_update.Image")));
             this.btn_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_update.Location = new System.Drawing.Point(920, 109);
+            this.btn_update.Location = new System.Drawing.Point(920, 154);
             this.btn_update.Margin = new System.Windows.Forms.Padding(4);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(241, 82);
@@ -196,7 +199,7 @@
             this.dataCustomer.Margin = new System.Windows.Forms.Padding(4);
             this.dataCustomer.Name = "dataCustomer";
             this.dataCustomer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataCustomer.Size = new System.Drawing.Size(938, 231);
+            this.dataCustomer.Size = new System.Drawing.Size(722, 231);
             this.dataCustomer.TabIndex = 13;
             this.dataCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataCustomer_CellContentClick);
             this.dataCustomer.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dataCustomer_MouseDoubleClick);
@@ -207,9 +210,9 @@
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 24F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(508, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(211, 46);
+            this.label1.Size = new System.Drawing.Size(308, 46);
             this.label1.TabIndex = 14;
-            this.label1.Text = "Customer";
+            this.label1.Text = "New Customer";
             // 
             // btn_clear
             // 
@@ -225,11 +228,46 @@
             this.btn_clear.UseVisualStyleBackColor = true;
             this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
+            // txt_Customer_Search
+            // 
+            this.txt_Customer_Search.Location = new System.Drawing.Point(895, 78);
+            this.txt_Customer_Search.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_Customer_Search.Name = "txt_Customer_Search";
+            this.txt_Customer_Search.Size = new System.Drawing.Size(132, 22);
+            this.txt_Customer_Search.TabIndex = 23;
+            this.txt_Customer_Search.TextChanged += new System.EventHandler(this.txt_Customer_Search_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(848, 50);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(238, 24);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Search By Customer Name";
+            // 
+            // lbl_text
+            // 
+            this.lbl_text.AutoSize = true;
+            this.lbl_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_text.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lbl_text.Location = new System.Drawing.Point(232, 481);
+            this.lbl_text.Name = "lbl_text";
+            this.lbl_text.Size = new System.Drawing.Size(701, 29);
+            this.lbl_text.TabIndex = 25;
+            this.lbl_text.Text = "If you want Update details please click the table row and click update only";
+            this.lbl_text.UseCompatibleTextRendering = true;
+            // 
             // userControl_customers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.lbl_text);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txt_Customer_Search);
             this.Controls.Add(this.btn_clear);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataCustomer);
@@ -274,5 +312,8 @@
         private System.Windows.Forms.DataGridView dataCustomer;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_clear;
+        private System.Windows.Forms.TextBox txt_Customer_Search;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_text;
     }
 }

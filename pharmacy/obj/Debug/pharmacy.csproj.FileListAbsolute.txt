@@ -216,3 +216,4 @@ C:\git\Shakthi_Pharmacy_POS\pharmacy\obj\Debug\pharmacy.csproj.CopyComplete
 C:\git\Shakthi_Pharmacy_POS\pharmacy\obj\Debug\pharmacy.exe
 C:\git\Shakthi_Pharmacy_POS\pharmacy\obj\Debug\pharmacy.pdb
 C:\git\Shakthi_Pharmacy_POS\pharmacy\obj\Debug\pharmacy.csproj.ResolveComReference.cache
+C:\git\Shakthi_Pharmacy_POS\pharmacy\obj\Debug\pharmacy.Reports.searchPurchaseInvoice.resources

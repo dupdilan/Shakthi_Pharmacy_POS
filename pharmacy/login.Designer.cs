@@ -52,6 +52,8 @@
             this.btn_login.Text = "        Login";
             this.btn_login.UseVisualStyleBackColor = false;
             this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
+            this.btn_login.KeyDown += new System.Windows.Forms.KeyEventHandler(this.loginWithEnter);
+            this.btn_login.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.enterKey);
             // 
             // txt_Username
             // 
@@ -69,6 +71,7 @@
             this.txt_password.PasswordChar = '*';
             this.txt_password.Size = new System.Drawing.Size(165, 22);
             this.txt_password.TabIndex = 2;
+            this.txt_password.TextChanged += new System.EventHandler(this.txt_password_TextChanged);
             // 
             // btn_exit
             // 

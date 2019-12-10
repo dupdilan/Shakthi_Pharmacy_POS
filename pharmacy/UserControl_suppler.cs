@@ -49,34 +49,41 @@ namespace pharmacy
         {
             try
             {
-
-                string sqlquary = "insert into Supplier_Details(Supplier_ID,Supplier_Name,Address,Phone,NIC) values('" + this.txt_supplierId.Text + "','" + this.txt_suppliername.Text+ "','" + this.txt_Address.Text + "','" + this.txt_supplierPhone.Text+ "','" + this.txt_NIC.Text + "'); ";
-                SqlCommand com = new SqlCommand(sqlquary, conn);
-                SqlDataReader sdr;
-                conn.Open();
-
-                sdr = com.ExecuteReader();
-
-
-                while (sdr.Read())
+                if (this.txt_supplierId.Text != "" && this.txt_suppliername.Text != "" && this.txt_supplierPhone.Text != "" && this.txt_NIC.Text != "" && this.txt_Address.Text != "")
                 {
+                    string sqlquary = "insert into Supplier_Details(Supplier_ID,Supplier_Name,Address,Phone,NIC) values('" + this.txt_supplierId.Text + "','" + this.txt_suppliername.Text + "','" + this.txt_Address.Text + "','" + this.txt_supplierPhone.Text + "','" + this.txt_NIC.Text + "'); ";
+                    SqlCommand com = new SqlCommand(sqlquary, conn);
+                    SqlDataReader sdr;
+                    conn.Open();
+
+                    sdr = com.ExecuteReader();
+
+
+                    while (sdr.Read())
+                    {
+
+                    }
+
+                    conn.Close();
+                    disp_data();
+                    txt_supplierId.Text = " ";
+                    txt_suppliername.Text = " ";
+                    txt_supplierPhone.Text = " ";
+                    txt_Supplier_Search.Text = " ";
+                    txt_NIC.Text = " ";
+                    txt_Address.Text = " ";
+
 
                 }
-
-                conn.Close();
-                disp_data();
-                txt_supplierId.Text = " ";
-                txt_suppliername.Text = " ";
-                txt_supplierPhone.Text = " ";
-                txt_Supplier_Search.Text = " ";
-                txt_NIC.Text = " ";
-                txt_Address.Text = " ";
-
+                else
+                {
+                    MessageBox.Show("You should have to Fill Correctly!!!");
+                }
 
             }
             catch (Exception e002)
             {
-                MessageBox.Show(e002.Message);
+                MessageBox.Show("Cannot use same ID for defferent Items Or If you want to Update item details please click the Update Button..Thank you!!!");
                 conn.Close();
             }
 
@@ -172,13 +179,21 @@ namespace pharmacy
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
-            String quary = "select * from Item_details where Item_ID='" + this.txt_Supplier_Search.Text + "' ;";
-            SqlCommand com = new SqlCommand(quary, conn);
-            SqlDataAdapter sda = new SqlDataAdapter();
-            sda.SelectCommand = com;
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            dataGridView_Suppliers.DataSource = dt;
+            if (txt_Supplier_Search.Text != "")
+            {
+                String quary = "select * from Supplier_Details where Supplier_Name='" + this.txt_Supplier_Search.Text + "' ;";
+                SqlCommand com = new SqlCommand(quary, conn);
+                SqlDataAdapter sda = new SqlDataAdapter();
+                sda.SelectCommand = com;
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView_Suppliers.DataSource = dt;
+            }
+            else
+            {
+                disp_data();
+            }
+               
 
         }
 
@@ -190,6 +205,17 @@ namespace pharmacy
             txt_Supplier_Search.Text = "";
             txt_NIC.Text = "";
             txt_Address.Text = "";
+        }
+
+        private void txt_Supplier_Search_TextChanged(object sender, EventArgs e)
+        {
+            conn.Open();
+            SqlDataAdapter adapt;
+            adapt = new SqlDataAdapter("select * from Supplier_Details where Supplier_Name like '" + txt_Supplier_Search.Text + "%'", conn);
+            DataTable dt = new DataTable();
+            adapt.Fill(dt);
+            dataGridView_Suppliers.DataSource = dt;
+            conn.Close();
         }
     }
 }

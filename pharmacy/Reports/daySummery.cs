@@ -24,22 +24,30 @@ namespace pharmacy.Reports
 
         private void btn_view_Click(object sender, EventArgs e)
         {
-            string path = Directory.GetCurrentDirectory();
-            string parent = (Directory.GetParent(Directory.GetParent(path).FullName).FullName).ToString();
-            string fullPath = parent + @"\Reports\crystalReport\daySummery.rpt";
+            try
+            {
+                string path = Directory.GetCurrentDirectory();
+                string parent = (Directory.GetParent(Directory.GetParent(path).FullName).FullName).ToString();
+                string fullPath = parent + @"\Reports\crystalReport\daySummery.rpt";
 
-            string fromDate = txt_from.Text.ToString();
-            string toDate = txt_to.Text.ToString();
-            //MessageBox.Show(fromDate, toDate);
+                string fromDate = txt_from.Text.ToString();
+                string toDate = txt_to.Text.ToString();
+                //MessageBox.Show(fromDate, toDate);
+
+                cryrpt.Load(@fullPath);
+                conn.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("Select * from Sales where Date between '" + fromDate + "'  AND '" + toDate + "'", conn);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                cryrpt.SetDataSource(dt);
+                crystalReportViewer1.ReportSource = cryrpt;
+                conn.Close();
+            }
+            catch(Exception e01)
+            {
+                MessageBox.Show(e01.Message);
+            }
             
-            cryrpt.Load(@fullPath);
-            conn.Open();
-            SqlDataAdapter sda = new SqlDataAdapter("Select * from Sales where Date between '"+ fromDate +"'  AND '"+toDate+"'", conn);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            cryrpt.SetDataSource(dt);
-            crystalReportViewer1.ReportSource = cryrpt;
-            conn.Close();
             
         }
 

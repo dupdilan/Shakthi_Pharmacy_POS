@@ -234,12 +234,14 @@
             this.price,
             this.Qty,
             this.Total});
+            this.listView_Purchase.HideSelection = false;
             this.listView_Purchase.Location = new System.Drawing.Point(94, 331);
             this.listView_Purchase.Name = "listView_Purchase";
             this.listView_Purchase.Size = new System.Drawing.Size(957, 244);
             this.listView_Purchase.TabIndex = 18;
             this.listView_Purchase.UseCompatibleStateImageBehavior = false;
             this.listView_Purchase.View = System.Windows.Forms.View.Details;
+            this.listView_Purchase.SelectedIndexChanged += new System.EventHandler(this.listView_Purchase_SelectedIndexChanged);
             // 
             // Item_name
             // 
@@ -350,7 +352,7 @@
             // 
             // txt_noofItems
             // 
-            this.txt_noofItems.Location = new System.Drawing.Point(143, 593);
+            this.txt_noofItems.Location = new System.Drawing.Point(159, 593);
             this.txt_noofItems.Name = "txt_noofItems";
             this.txt_noofItems.Size = new System.Drawing.Size(100, 22);
             this.txt_noofItems.TabIndex = 27;
@@ -363,6 +365,7 @@
             this.txt_Subtotal.Size = new System.Drawing.Size(100, 22);
             this.txt_Subtotal.TabIndex = 28;
             this.txt_Subtotal.Text = "0";
+            this.txt_Subtotal.TextChanged += new System.EventHandler(this.txt_Subtotal_TextChanged);
             // 
             // txt_discount
             // 
@@ -370,6 +373,7 @@
             this.txt_discount.Name = "txt_discount";
             this.txt_discount.Size = new System.Drawing.Size(100, 22);
             this.txt_discount.TabIndex = 29;
+            this.txt_discount.Text = "0";
             this.txt_discount.TextChanged += new System.EventHandler(this.txt_discount_TextChanged);
             // 
             // txt_net
@@ -385,6 +389,7 @@
             this.txt_paid.Name = "txt_paid";
             this.txt_paid.Size = new System.Drawing.Size(124, 22);
             this.txt_paid.TabIndex = 31;
+            this.txt_paid.Text = "0";
             this.txt_paid.TextChanged += new System.EventHandler(this.txt_paid_TextChanged);
             // 
             // txt_balance

@@ -26,21 +26,29 @@ namespace pharmacy.Reports
 
         private void salesInvoice_Load(object sender, EventArgs e)
         {
-            string path = Directory.GetCurrentDirectory();
-            string parent = (Directory.GetParent(Directory.GetParent(path).FullName).FullName).ToString();
-            string fullPath = parent + @"\Reports\crystalReport\salesInvoice.rpt";
+            try
+            {
+                string path = Directory.GetCurrentDirectory();
+                string parent = (Directory.GetParent(Directory.GetParent(path).FullName).FullName).ToString();
+                string fullPath = parent + @"\Reports\crystalReport\salesInvoice.rpt";
 
-            cryrpt.Load(@fullPath);
-            conn.Open();
-            DataSet.item dst = new DataSet.item();
-            SqlDataAdapter sda = new SqlDataAdapter("select * from Sales where Invoice_Id="+ invoice_Id, conn);
-            sda.Fill(dst, "Sales");
-            SqlDataAdapter sda1 = new SqlDataAdapter("select * from Sales_Item where Invoice_Id="+ invoice_Id, conn);
-            sda1.Fill(dst, "Sales_Item");
-            cryrpt.SetDataSource(dst);
+                cryrpt.Load(@fullPath);
+                conn.Open();
+                DataSet.item dst = new DataSet.item();
+                SqlDataAdapter sda = new SqlDataAdapter("select * from Sales where Invoice_Id=" + invoice_Id, conn);
+                sda.Fill(dst, "Sales");
+                SqlDataAdapter sda1 = new SqlDataAdapter("select * from Sales_Item where Invoice_Id=" + invoice_Id, conn);
+                sda1.Fill(dst, "Sales_Item");
+                cryrpt.SetDataSource(dst);
 
-            crystalReportViewer1.ReportSource = cryrpt;
-            conn.Close();
+                crystalReportViewer1.ReportSource = cryrpt;
+                conn.Close();
+            }
+            catch(Exception e01)
+            {
+                MessageBox.Show(e01.Message);
+            }
+            
         }
     }
 }

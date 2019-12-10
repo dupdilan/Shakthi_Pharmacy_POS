@@ -77,6 +77,7 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "Purchase Report";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -116,6 +117,7 @@
             this.btn_commonItems.TabIndex = 7;
             this.btn_commonItems.Text = "Show Most Commom Items";
             this.btn_commonItems.UseVisualStyleBackColor = true;
+            this.btn_commonItems.Click += new System.EventHandler(this.btn_commonItems_Click);
             // 
             // btn_day_summery
             // 

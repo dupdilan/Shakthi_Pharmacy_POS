@@ -31,11 +31,16 @@ namespace pharmacy
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            try {
+            LoginToSys();
+        }
+        private void LoginToSys()
+        {
+            try
+            {
                 conn.Open();
-            SqlDataAdapter sda = new SqlDataAdapter("Select * from login where Username='" + txt_Username.Text + "' and Password='" + txt_password.Text + "'", conn);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
+                SqlDataAdapter sda = new SqlDataAdapter("Select * from login where Username='" + txt_Username.Text + "' and Password='" + txt_password.Text + "'", conn);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
 
                 if (dt.Rows.Count == 1)
                 {
@@ -53,16 +58,36 @@ namespace pharmacy
                     conn.Close();
                 }
             }
-            catch(Exception e01)
+            catch (Exception e01)
             {
                 MessageBox.Show(e01.Message);
                 conn.Close();
             }
+
+
         }
 
         private void Login_Load(object sender, EventArgs e)
         {
+            this.txt_password.KeyPress += new System.Windows.Forms.KeyPressEventHandler(enterKey);
+        }
 
+        private void enterKey(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                this.LoginToSys();
+            }
+        }
+
+        private void loginWithEnter(object sender, KeyEventArgs e)
+        {
+           
+        }
+
+        private void txt_password_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

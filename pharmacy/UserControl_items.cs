@@ -14,14 +14,13 @@ namespace pharmacy
 {
     public partial class UserControl_items : UserControl
     {
-        SqlConnection conn = new SqlConnection(DBUtil.dbPath);
+        SqlConnection  conn = new SqlConnection(DBUtil.dbPath);
 
         public UserControl_items()
         {
             InitializeComponent();
-            disp_data();
+            disp_data_Items();
         }
-        
 
         private void data_item_MouseDoubleClick(object sender, MouseEventArgs e)
         {
@@ -32,9 +31,9 @@ namespace pharmacy
             txt_price.Text = dataItems.SelectedRows[0].Cells[4].Value.ToString();
             txt_qty.Text = dataItems.SelectedRows[0].Cells[5].Value.ToString();
         }
-        public void disp_data()
+        public void  disp_data_Items()
         {
-
+            Console.Write("DISP DATA EXECUTED");
             String quary = "select * from Item_details ;";
             SqlCommand com = new SqlCommand(quary, conn);
             SqlDataAdapter sda = new SqlDataAdapter();
@@ -49,35 +48,42 @@ namespace pharmacy
         {
             try
             {
-
-                string sqlquary = "insert into Item_details(Item_ID,Name,Description,Price_Cost,Sales_Price,Qty) values('" + this.txt_itemID.Text + "','" + this.txt_item_name.Text + "','" + this.txt_description.Text + "','" + this.txt_pricecost.Text + "','" + this.txt_price.Text + "','" + this.txt_qty.Text + "'); ";
-                SqlCommand com = new SqlCommand(sqlquary, conn);
-                SqlDataReader sdr;
-                conn.Open();
-
-                sdr = com.ExecuteReader();
-                MessageBox.Show("Save Data");
-
-                while (sdr.Read())
+                if (this.txt_itemID.Text != "" && this.txt_item_name.Text !="" && this.txt_pricecost.Text != "" &&  this.txt_price.Text != "" )
                 {
+                    string sqlquary = "insert into Item_details(Item_ID,Name,Description,Price_Cost,Sales_Price,Qty) values('" + this.txt_itemID.Text + "','" + this.txt_item_name.Text + "','" + this.txt_description.Text + "','" + this.txt_pricecost.Text + "','" + this.txt_price.Text + "','" + this.txt_qty.Text + "'); ";
+                    SqlCommand com = new SqlCommand(sqlquary, conn);
+                    SqlDataReader sdr;
+                    conn.Open();
+
+                    sdr = com.ExecuteReader();
+                    MessageBox.Show("Save Data");
+
+                    while (sdr.Read())
+                    {
+
+                    }
+
+                    conn.Close();
+                    disp_data_Items();
+                    txt_itemID.Text = " ";
+                    txt_item_name.Text = " ";
+                    txt_description.Text = " ";
+                    txt_pricecost.Text = " ";
+                    txt_price.Text = " ";
+
+                    txt_qty.Text = " ";
+
 
                 }
-
-                conn.Close();
-                disp_data();
-                txt_itemID.Text = " ";
-                txt_item_name.Text = " ";
-                txt_description.Text = " ";
-                txt_pricecost.Text = " ";
-                txt_price.Text = " ";
-                
-                txt_qty.Text = " ";
-
+                else
+                {
+                    MessageBox.Show("You should have to Fill Correctly!!!");
+                }
 
             }
             catch (Exception e002)
             {
-                MessageBox.Show(e002.Message);
+                MessageBox.Show("Cannot use same ID for defferent Items Or If you want to Update item details please click the Update Button..Thank you!!!");
                 conn.Close();
             }
         }
@@ -99,7 +105,7 @@ namespace pharmacy
                 }
 
                 conn.Close();
-                disp_data();
+                disp_data_Items();
                 txt_itemID.Text = " ";
                 txt_item_name.Text = " ";
                 txt_description.Text = " ";
@@ -135,7 +141,7 @@ namespace pharmacy
                 }
 
                 conn.Close();
-                disp_data();
+                disp_data_Items();
                 txt_itemID.Text = " ";
                 txt_item_name.Text = " ";
                 txt_description.Text = " ";
@@ -164,9 +170,9 @@ namespace pharmacy
             txt_qty.Text = "";
         }
 
-        private void UserControl_items_Load(object sender, EventArgs e)
+        public void UserControl_items_Load(object sender, EventArgs e)
         {
-            disp_data();
+            disp_data_Items();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -219,6 +225,44 @@ namespace pharmacy
             {
                 GC.Collect();
             }
+        }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            /*String searchItemsName = txt_Item_Search.Text;
+            Console.WriteLine(searchItemsName);
+            if (txt_Item_Search.Text != "")
+            {
+                //"select * from Staff where SAP_No like '" + txtBoxSearch.Text + "%'",con
+
+                    String quary = "select * from Item_details where Name like ' "+ searchItemsName + "% ' " ;
+                SqlCommand com = new SqlCommand(quary, conn);
+                SqlDataAdapter sda = new SqlDataAdapter();
+                sda.SelectCommand = com;
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataItems.DataSource = dt;
+            }
+            else {
+                disp_data_Items();
+            }
+            */
+        }
+
+        private void dataItems_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void searchItem(object sender, EventArgs e)
+        {
+            conn.Open();
+            SqlDataAdapter adapt;
+            adapt = new SqlDataAdapter("select * from Item_details where Name like '" + txt_Item_Search.Text + "%'", conn);
+            DataTable dt = new DataTable();
+            adapt.Fill(dt);
+            dataItems.DataSource = dt;
+            conn.Close();
         }
     }
 }

@@ -226,6 +226,8 @@ namespace pharmacy
                 conn.Close();
             }
             txt_Subtotal.Text = (Convert.ToInt32(arrPurchaseItems[4]) + (Convert.ToInt32(txt_Subtotal.Text))).ToString();
+            txt_net.Text = txt_Subtotal.Text;
+            txt_balance.Text = txt_net.Text;
             txt_itemName.Text = "";
             txt_Price.Text = "0";
             txt_qty.Text = "";
@@ -387,6 +389,8 @@ namespace pharmacy
             if (answer == DialogResult.Yes)
             {
                 placeOrder();
+                //UserControl_items.User
+               
                 /*
                 int passId = Convert.ToInt32(txt_purchaseID.Text) - 1;
                 Reports.salesInvoice salesIn = new Reports.salesInvoice(passId);
@@ -430,6 +434,16 @@ namespace pharmacy
         }
 
         private void txt_date_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_Subtotal_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listView_Purchase_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
